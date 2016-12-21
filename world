@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<world>
+  <plugins>
+    <plugin name='genmesh'>crystalspace.mesh.loader.genmesh</plugin>
+    <plugin name='genmeshfact'>crystalspace.mesh.loader.factory.genmesh</plugin>
+  </plugins>
+  <shaders>
+    <shader>
+      <file>/shader/light_bumpmap.xml</file>
+    </shader>
+  </shaders>
+  <textures>
+    <texture name='JW_004.JPG'>
+      <file>textures/JW_004.JPG</file>
+    </texture>
+    <texture name='BUMPJW_004N.JPG'>
+      <file>textures/JW_004N.JPG</file>
+      <class>normalmap</class>
+    </texture>
+    <texture name='JW_005.JPG'>
+      <file>textures/JW_005.JPG</file>
+    </texture>
+    <texture name='BUMPJW_005N.JPG'>
+      <file>textures/JW_005N.JPG</file>
+      <class>normalmap</class>
+    </texture>
+    <texture name='CHENGHE1.JPG'>
+      <file>textures/CHENGHE1.JPG</file>
+    </texture>
+    <texture name='BUMPCHENGHEN.JPG'>
+      <file>textures/CHENGHEN.JPG</file>
+      <class>normalmap</class>
+    </texture>
+    <texture name='JW_01.JPG'>
+      <file>textures/JW_01.JPG</file>
+    </texture>
+    <texture name='BUMPJW_01N.JPG'>
+      <file>textures/JW_01N.JPG</file>
+      <class>normalmap</class>
+    </texture>
+    <texture name='JW_02.JPG'>
+      <file>textures/JW_02.JPG</file>
+    </texture>
+    <texture name='BUMPJW_02N.JPG'>
+      <file>textures/JW_02N.JPG</file>
+      <class>normalmap</class>
+    </texture>
+  </textures>
+  <materials>
+    <material name='jgj_jw_0041'>
+      <texture>JW_004.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_004N.JPG</shadervar>
+    </material>
+    <material name='jgj_jw_0051'>
+      <texture>JW_005.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_005N.JPG</shadervar>
+    </material>
+    <material name='chenghe11'>
+      <texture>CHENGHE1.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPCHENGHEN.JPG</shadervar>
+    </material>
+    <material name='yj_diban_jw_01'>
+      <texture>JW_01.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_01N.JPG</shadervar>
+    </material>
+    <material name='yj_diban_jw_02'>
+      <texture>JW_02.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_02N.JPG</shadervar>
+    </material>
+    <material name='chenghe1'>
+      <texture>CHENGHE1.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPCHENGHEN.JPG</shadervar>
+    </material>
+    <material name='07 - Default'>
+      <texture>no</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_01N.JPG</shadervar>
+    </material>
+    <material name='jgj_jw_005'>
+      <texture>JW_005.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_005N.JPG</shadervar>
+    </material>
+    <material name='jgj_jw_004'>
+      <texture>JW_004.JPG</texture>
+      <shader type='diffuse'>light_bumpmap</shader>
+      <shadervar type='texture' name='tex normal'>BUMPJW_004N.JPG</shadervar>
+    </material>
+  </materials>
+  <sounds/>
+  <settings>
+    <clearscreen>yes</clearscreen>
+    <clearzbuf>yes</clearzbuf>
+  </settings>
+  <library>factories/genreflect_jgj_jw_0041</library>
+  <library>factories/genreflect_jgj_jw_0051</library>
+  <library>factories/genreflect_chenghe11</library>
+  <library>factories/genjgj_yj_diban_jw_01</library>
+  <library>factories/genjgj_yj_diban_jw_02</library>
+  <library>factories/genjgj_chenghe1</library>
+  <library>factories/genjgj_07 - Default</library>
+  <library>factories/genjgj_jgj_jw_005</library>
+  <library>factories/genjgj_jgj_jw_004</library>
+  <triggers/>
+  <addon>
+    <plugin>crystalspace.renderloop.loop.loader</plugin>
+    <paramsfile>/shader/std_rloop_shadowmap.xml</paramsfile>
+  </addon>
+  <sector name='Scene'>
+    <renderloop>std_rloop_shadowmap</renderloop>
+    <ambient blue='0.5' green='0.5' red='0.5'/>
+    <cullerp plugin='crystalspace.culling.frustvis'/>
+    <meshobj name='reflect_jgj_jw_0041'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genreflect_jgj_jw_0041</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='-10.9394' x='-0.8848' z='-0.9561'/>
+      </move>
+    </meshobj>
+    <meshobj name='reflect_jgj_jw_0051'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genreflect_jgj_jw_0051</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='-9.3733' x='-13.2144' z='7.8341'/>
+      </move>
+    </meshobj>
+    <meshobj name='reflect_chenghe11'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genreflect_chenghe11</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='-11.7286' x='-0.8285' z='-0.2096'/>
+      </move>
+    </meshobj>
+    <meshobj name='jgj_yj_diban_jw_01'>
+      <plugin>genmesh</plugin>
+      <priority>alpha</priority>
+      <params>
+        <factory>genjgj_yj_diban_jw_01</factory>
+        <mixmode>
+          <add/>
+        </mixmode>
+      </params>
+      <zuse/>
+      <move>
+        <v y='0.8072' x='0.001' z='0.001'/>
+      </move>
+    </meshobj>
+    <meshobj name='jgj_yj_diban_jw_02'>
+      <plugin>genmesh</plugin>
+      <priority>transp</priority>
+      <params>
+        <factory>genjgj_yj_diban_jw_02</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='0.001' x='0.001' z='0.001'/>
+      </move>
+    </meshobj>
+    <meshobj name='jgj_chenghe1'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genjgj_chenghe1</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='13.1731' x='-0.8285' z='-0.2096'/>
+      </move>
+    </meshobj>
+    <meshobj name='glass_'>
+      <plugin>genmesh</plugin>
+      <priority>alpha</priority>
+      <params>
+        <factory>genjgj_07 - Default</factory>
+        <mixmode>
+          <add/>
+        </mixmode>
+      </params>
+      <zuse/>
+      <move>
+        <v y='23.7074' x='-0.7871' z='2.0351'/>
+      </move>
+    </meshobj>
+    <meshobj name='jgj_jgj_jw_005'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genjgj_jgj_jw_005</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='10.8178' x='-13.2144' z='7.8341'/>
+      </move>
+    </meshobj>
+    <meshobj name='jgj_jgj_jw_004'>
+      <plugin>genmesh</plugin>
+      <priority>object</priority>
+      <params>
+        <factory>genjgj_jgj_jw_004</factory>
+      </params>
+      <zuse/>
+      <move>
+        <v y='12.3839' x='-0.8848' z='-0.9561'/>
+      </move>
+    </meshobj>
+    <light name='Lamp'>
+      <center y='5.9039' x='4.0762' z='1.0055'/>
+      <color blue='1.0' green='1.0' red='1.0'/>
+      <radius brightness='1.0'>29.9999828339</radius>
+    </light>
+  </sector>
+  <sequences/>
+  <start name='Camera'>
+    <sector>Scene</sector>
+    <position y='5.3437' x='7.4811' z='-6.5076'/>
+    <up y='0.8953' x='-0.3307' z='0.2984'/>
+    <forward y='-0.4452' x='-0.6549' z='0.6107'/>
+  </start>
+</world>
